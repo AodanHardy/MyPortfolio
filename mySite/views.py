@@ -11,6 +11,9 @@ def index(request):
 def about(request):
     return render(request, 'mySite/about.html', {'request': request})
 
+def experience(request):
+    return render(request, 'mySite/experience.html', {'request': request})
+
 
 def projects(request):
     return render(request, 'mySite/projects.html', {'request': request})

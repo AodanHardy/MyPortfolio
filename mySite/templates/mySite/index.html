@@ -1,7 +1,78 @@
 {% extends 'mySite/base.html' %}
 
 {% block body %}
+<div class="cv-container mt-5 text-light">
+    <!-- Profile Section -->
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <!-- Profile Picture -->
+            <img src="your-profile-picture.jpg" alt="Profile Picture" class="cv-profile-img mb-3" width="150">
+            <h2 class="cv-name">Your Name</h2>
+            <p class="lead cv-title">Your Job Title</p>
+            <p class="cv-location text-muted">Location | Contact Information</p>
+        </div>
+        <div class="col-md-8">
+            <!-- About Me -->
+            <h3 class="cv-section-title border-bottom pb-2 mb-3">About Me</h3>
+            <p class="cv-about">
+                Briefly introduce yourself. Mention your background, key strengths, and what you are passionate about. This section should be a concise summary of your professional profile.
+            </p>
+        </div>
+    </div>
 
+    <!-- Experience Section -->
+    <div class="cv-section mt-5">
+        <h3 class="cv-section-title border-bottom pb-2 mb-3">Experience</h3>
+        <div class="cv-experience mb-4">
+            <h4 class="cv-job-title">Job Title #1</h4>
+            <p class="text-muted cv-company">Company Name | Location | Year - Year</p>
+            <ul class="cv-responsibilities">
+                <li>Key responsibility or achievement #1</li>
+                <li>Key responsibility or achievement #2</li>
+                <li>Key responsibility or achievement #3</li>
+            </ul>
+        </div>
+        <div class="cv-experience mb-4">
+            <h4 class="cv-job-title">Job Title #2</h4>
+            <p class="text-muted cv-company">Company Name | Location | Year - Year</p>
+            <ul class="cv-responsibilities">
+                <li>Key responsibility or achievement #1</li>
+                <li>Key responsibility or achievement #2</li>
+                <li>Key responsibility or achievement #3</li>
+            </ul>
+        </div>
+    </div>
 
+    <!-- Education Section -->
+    <div class="cv-section mt-5">
+        <h3 class="cv-section-title border-bottom pb-2 mb-3">Education</h3>
+        <div class="cv-education mb-4">
+            <h4 class="cv-degree">Degree Name</h4>
+            <p class="text-muted cv-school">University Name | Year of Graduation</p>
+            <p>Description of your course or any special achievements during your study.</p>
+        </div>
+    </div>
 
+    <!-- Skills Section -->
+    <div class="cv-section mt-5">
+        <h3 class="cv-section-title border-bottom pb-2 mb-3">Skills</h3>
+        <ul class="cv-skills list-unstyled">
+            <li><i class="fas fa-check-circle text-primary"></i> Skill #1</li>
+            <li><i class="fas fa-check-circle text-primary"></i> Skill #2</li>
+            <li><i class="fas fa-check-circle text-primary"></i> Skill #3</li>
+            <li><i class="fas fa-check-circle text-primary"></i> Skill #4</li>
+        </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="cv-section mt-5">
+        <h3 class="cv-section-title border-bottom pb-2 mb-3">Contact</h3>
+        <p>If you'd like to get in touch, feel free to contact me through the following methods:</p>
+        <ul class="cv-contact list-inline">
+            <li class="list-inline-item"><i class="fas fa-envelope"></i> <a href="mailto:youremail@example.com" class="text-light">youremail@example.com</a></li>
+            <li class="list-inline-item"><i class="fas fa-phone"></i> <a href="tel:+123456789" class="text-light">+123456789</a></li>
+            <li class="list-inline-item"><i class="fas fa-linkedin"></i> <a href="https://www.linkedin.com/in/yourprofile" class="text-light">LinkedIn</a></li>
+        </ul>
+    </div>
+</div>
 {% endblock %}

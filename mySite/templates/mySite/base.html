@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>My Project</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -35,10 +35,17 @@
                             <i class="fas fa-user"></i> About Me
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/experience/' %}active {% endif %}"
+                           href="{% url 'experience' %}">
+                            <i class="fas fa-user"></i> My Experience
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/projects/' %}active {% endif %}"
                            href="{% url 'projects' %}">
-                            <i class="fas fa-briefcase"></i> Projects
+                            <i class="fas fa-briefcase"></i> My Projects
                         </a>
                     </li>
                     <li class="nav-item {% if request.path == '/blog/' %}active {% endif %}">

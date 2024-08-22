@@ -1,0 +1,123 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.cv-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Profile */
+.cv-profile-img {
+    border-radius: 50%;
+    border: 5px solid #e0e0e0;
+}
+
+.cv-name {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.cv-title {
+    font-weight: 500;
+    color: #1e90ff;
+}
+
+.cv-location {
+    font-size: 0.9em;
+}
+
+/* Section titles */
+.cv-section-title {
+    font-weight: 700;
+    color: #ffffff;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* About Me */
+.cv-about {
+    font-size: 1em;
+}
+
+/* Experience and Education */
+.cv-experience, .cv-education {
+    margin-bottom: 20px;
+}
+
+.cv-job-title, .cv-degree {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.cv-company, .cv-school {
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+.cv-responsibilities {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.cv-responsibilities li {
+    margin-bottom: 10px;
+}
+
+.cv-responsibilities li::before {
+    content: "\2022"; /* Bullet point */
+    color: #1e90ff; /* Primary color */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Skills */
+.cv-skills li {
+    padding-left: 20px;
+    position: relative;
+}
+
+.cv-skills li i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #1e90ff;
+}
+
+/* Contact Section */
+.cv-contact {
+    padding-left: 0;
+    list-style: none;
+}
+
+.cv-contact .list-inline-item {
+    margin-right: 15px;
+}
+
+.cv-contact .list-inline-item i {
+    margin-right: 5px;
+    color: #1e90ff;
+}
+
+.cv-contact .list-inline-item a {
+    color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .text-center {
+        text-align: center;
+    }
+
+    .cv-container {
+        padding: 15px;
+    }
+
+    .cv-contact .list-inline-item {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
