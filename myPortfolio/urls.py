@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 
 from mySite import views
+from blog import views as blog_views
+from projects import views as project_views
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -26,8 +28,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('about/', views.about, name='about'),
     path('experience/', views.experience, name='experience'),
-    path('projects/', views.projects, name='projects'),
-    path('blog/', views.blog, name='blog'),
+    path('projects/', project_views.projects, name='projects'),
+    path('blog/', blog_views.blog, name='blog'),
     path('contact/', views.contact, name='contact'),
 ]
 
