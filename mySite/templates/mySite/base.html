@@ -9,13 +9,12 @@
         <!-- Bootstrap JS -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
+
         <link rel="stylesheet" href="{% static 'mySite/styles.css' %}">
     </head>
 
     <body>
-
-   <!-- NAVBAR -->
-
+                                    <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">My Portfolio</a>
@@ -25,27 +24,30 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">
+                        <a class="nav-link {% if request.path == '/' %}active {% endif %}" aria-current="page"
+                           href="{% url 'index' %}">
                             <i class="fas fa-home"></i> Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link {% if request.path == '/about/' %}active {% endif %}"
+                           href="{% url 'about' %}">
                             <i class="fas fa-user"></i> About Me
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link {% if request.path == '/projects/' %}active {% endif %}"
+                           href="{% url 'projects' %}">
                             <i class="fas fa-briefcase"></i> Projects
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
+                    <li class="nav-item {% if request.path == '/blog/' %}active {% endif %}">
+                        <a class="nav-link" href="{% url 'blog' %}">
                             <i class="fas fa-blog"></i> Blog
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
+                    <li class="nav-item {% if request.path == '/contact/' %}active {% endif %}">
+                        <a class="nav-link" href="{% url 'contact' %}">
                             <i class="fas fa-envelope"></i> Contact
                         </a>
                     </li>
