@@ -53,20 +53,20 @@ body {
 }
 
 .cv-company, .cv-school {
-    font-size: 0.9em;
+    font-size: 1.2em;
     color: #b0b0b0;
 }
 
-.cv-responsibilities {
+.cv-list {
     list-style-type: none;
     padding-left: 0;
 }
 
-.cv-responsibilities li {
+.cv-list li {
     margin-bottom: 10px;
 }
 
-.cv-responsibilities li::before {
+.cv-list li::before {
     content: "\2022"; /* Bullet point */
     color: #1e90ff; /* Primary color */
     font-weight: bold;
@@ -75,49 +75,56 @@ body {
     margin-left: -1em;
 }
 
-/* Skills */
-.cv-skills li {
-    padding-left: 20px;
-    position: relative;
+.cv-subsection-title {
+    font-weight: 600;
+    color: #ffffff;
+    border-bottom: 2px solid #e0e0e0;
 }
 
-.cv-skills li i {
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #1e90ff;
-}
-
-/* Contact Section */
-.cv-contact {
+.cv-qualifications {
+    list-style-type: none;
     padding-left: 0;
-    list-style: none;
 }
 
-.cv-contact .list-inline-item {
-    margin-right: 15px;
-}
-
-.cv-contact .list-inline-item i {
-    margin-right: 5px;
-    color: #1e90ff;
-}
-
-.cv-contact .list-inline-item a {
+.cv-qualifications li {
+    margin-bottom: 10px;
+    font-size: 1em;
     color: #e0e0e0;
 }
 
+/* Skills */
+/* Skills Section */
+.cv-skill {
+    background-color: #1e1e1e; /* Dark background for skill blocks */
+    border-radius: 8px;
+    padding: 15px;
+    color: #e0e0e0; /* Light text */
+}
+
+.cv-skill-title {
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.cv-skill-description {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .text-center {
-        text-align: center;
-    }
-
-    .cv-container {
-        padding: 15px;
-    }
-
-    .cv-contact .list-inline-item {
-        display: block;
-        margin-bottom: 10px;
+    .cv-skill {
+        padding: 10px;
     }
 }
+
+
+
+
+
+
+
+
+
+
