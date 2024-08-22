@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 
 from mySite import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,3 +30,7 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('contact/', views.contact, name='contact'),
 ]
+
+urlpatterns += [
+                  # ... the rest of your URLconf goes here ...
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
