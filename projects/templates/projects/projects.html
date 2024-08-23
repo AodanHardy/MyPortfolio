@@ -1,5 +1,25 @@
 {% extends 'mySite/base.html' %}
 
 {% block body %}
-
+<div class="container mt-5">
+    <h2 class="projects-title mb-4">Projects</h2>
+    <div class="row">
+        {% for project in projects %}
+            <div class="col-md-12 mb-12" style="padding-bottom: 30px">
+                <div class="project-card d-flex">
+                    {% if project.image %}
+                        <img src="{{ project.image.url }}" alt="{{ project.title }}" class="project-image">
+                    {% endif %}
+                    <div class="project-details ml-4">
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        {% if project.github_link %}
+                            <a href="{{ project.github_link }}" class="btn btn-primary" target="_blank">View on GitHub</a>
+                        {% endif %}
+                        <p class="project-description">{{ project.description }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
