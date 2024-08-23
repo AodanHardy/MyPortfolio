@@ -4,4 +4,10 @@ from projects.models import Project
 
 # Register your models here.
 
-admin.site.register(Project)
+
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ('title', 'github_link')
+    fields = ('title', 'image', 'github_link', 'description',)
+
+
+admin.site.register(Project, ProjectAdmin)

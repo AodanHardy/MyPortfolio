@@ -4,4 +4,10 @@ from blog.models import BlogPost
 
 # Register your models here.
 
-admin.site.register(BlogPost)
+
+class BlogAdmin(admin.ModelAdmin):
+    list_display = ('title', 'published_date')
+    fields = ('title', 'content',)
+
+
+admin.site.register(BlogPost, BlogAdmin)
