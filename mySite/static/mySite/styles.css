@@ -358,11 +358,40 @@ body.blog-page {
     color: #1e90ff;
 }
 
-/* Ensure container has proper spacing */
+
+/* About Me */
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #4a4a4a;
+    padding-bottom: 10px;
+}
+
+.about-content {
+    font-size: 1.2rem;
+    color: #dcdcdc;
+    line-height: 1.8;
+}
+
+.about-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffd700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.about-paragraph {
+    margin-bottom: 20px;
+}
+
 .container {
     max-width: 800px;
     margin: auto;
 }
+
 
 
 
