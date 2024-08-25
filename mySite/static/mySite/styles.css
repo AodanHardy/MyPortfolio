@@ -297,6 +297,74 @@ body.blog-page {
     margin-bottom: 10px;
 }
 
+/* Contact Page Styling */
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #4a4a4a;
+    padding-bottom: 10px;
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    color: #dcdcdc;
+}
+
+.contact-email {
+    margin-bottom: 20px;
+}
+
+.contact-email a {
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-email a:hover {
+    color: #ffffff;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.social-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-link {
+    font-size: 1.5rem;
+    color: #dcdcdc;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-link i {
+    margin-right: 10px;
+}
+
+.social-link:hover {
+    color: #1e90ff;
+}
+
+/* Ensure container has proper spacing */
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+
 
 
 
