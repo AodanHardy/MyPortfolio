@@ -7,7 +7,7 @@ from projects.models import Project
 
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ('title', 'github_link')
-    fields = ('title', 'image', 'github_link', 'description',)
+    fields = ('title', 'display_date', 'github_link', 'description',)
 
 
 admin.site.register(Project, ProjectAdmin)
