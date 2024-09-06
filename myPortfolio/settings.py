@@ -80,10 +80,15 @@ WSGI_APPLICATION = 'myPortfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'local_portfolio',  # The name of your database
+        'USER': 'aodan',           # Your PostgreSQL username
+        'PASSWORD': 'amymagee2017',   # Your PostgreSQL password
+        'HOST': 'localhost',        # 'localhost' since it's running locally
+        'PORT': '5432',             # Default PostgreSQL port
     }
 }
+
 
 
 # Password validation
