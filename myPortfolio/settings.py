@@ -12,9 +12,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os.path
 from pathlib import Path
 
+import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -25,8 +26,8 @@ SECRET_KEY = 'django-insecure-wuelkum8b)0da3^_smhy-3xe5qc^7)73uexowz&o(q@!=)jo^!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['aodans-portfolio-3563210e8871.herokuapp.com', '127.0.0.1', 'localhost', 'aodanhardy.com', 'www.aodanhardy.com']
-
+ALLOWED_HOSTS = ['aodans-portfolio-3563210e8871.herokuapp.com', '127.0.0.1', 'localhost', 'aodanhardy.com',
+                 'www.aodanhardy.com']
 
 # Application definition
 
@@ -74,17 +75,27 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'myPortfolio.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'local_portfolio',  # The name of your database
+            'USER': 'aodan',  # Your PostgreSQL username
+            'PASSWORD': 'amymagee2017',  # Your PostgreSQL password
+            'HOST': 'localhost',  # 'localhost' since it's running locally
+            'PORT': '5432',  # Default PostgreSQL port
+        }
     }
-}
+else:
 
+    DATABASES = {
+        'default': dj_database_url.config(
+            default='postgres://u59a3nbo00nphp:pd6be7b8cb7a96da1dc7962a74d76683bf62f748c632fe40e7ebaad5fd93c9d65'
+                    '@ccpa7stkruda3o.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d2a96ksfh8qcek')
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -104,7 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -116,7 +126,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
@@ -125,7 +134,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'pictures/projectImages')
 
 STATIC_URL = 'static/'
 MEDIA_URL = '/pictures/'
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
